@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-container {
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+.select-container > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #777;
+    box-shadow: 0 0 15px #ccc;
+    border-radius: 10px;
+}
+
+.select-container > button svg {
+    width: 18px;
+    transition: 0.5s;
+}
+
+.select-container.open > button svg {
+    transform: rotate(180deg);
+}
+
+.select-container.open .options-container {
+    display: block;
+}
+
+.options-container {
+    color: #777;
+    box-shadow: 0 0 15px #ccc;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 120%;
+    border-radius: 8px;
+    padding: 5px 0px;
+    display: none;
+    z-index: 999;
+}
+
+.options-container .option {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.options-container .option:hover {
+    background-color: #eee;
+}
